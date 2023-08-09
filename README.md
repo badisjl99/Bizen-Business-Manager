@@ -1,1 +1,1 @@
-# AppTest
+Bizen+ Business Management Desktop App
