@@ -50,11 +50,11 @@
             this.successlabel.AutoSize = true;
             this.successlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.successlabel.ForeColor = System.Drawing.Color.Green;
-            this.successlabel.Location = new System.Drawing.Point(90, 16);
+            this.successlabel.Location = new System.Drawing.Point(78, 29);
             this.successlabel.Name = "successlabel";
-            this.successlabel.Size = new System.Drawing.Size(634, 42);
+            this.successlabel.Size = new System.Drawing.Size(663, 42);
             this.successlabel.TabIndex = 1;
-            this.successlabel.Text = "Product Added Successfullt To Stock";
+            this.successlabel.Text = "Product Added Successfully To Stock !";
             // 
             // ProductSuccessUC
             // 

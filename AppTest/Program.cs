@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using AppTest.AppLogin;
+using System;
 using System.Windows.Forms;
 
 namespace AppTest
@@ -16,7 +14,10 @@ namespace AppTest
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RequestsButton());
+            // Application.Run(new SignUpForm());
+            Application.Run(new LoginForm());
+            // Application.Run(new TestForm());
+
         }
     }
 }

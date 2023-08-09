@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppTest.Controllers
@@ -15,6 +8,15 @@ namespace AppTest.Controllers
         public ClientsUC()
         {
             InitializeComponent();
+        }
+
+        private void NormalClientButton_Click(object sender, EventArgs e)
+        {
+
+            NormalClientUC normalClientUC = new NormalClientUC();
+            Clients_Container.Controls.Clear();
+            Clients_Container.Controls.Add(normalClientUC);
+
         }
     }
 }

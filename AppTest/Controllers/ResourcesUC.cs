@@ -1,15 +1,11 @@
 ﻿using AppTest.Models;
+using AppTest.Tools;
+using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-using AppTest.Tools;
 
 namespace AppTest.Controllers
 {
@@ -20,35 +16,86 @@ namespace AppTest.Controllers
         public ResourcesUC()
         {
             InitializeComponent();
+            SetGridStyle();
+            DisplayTable();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void SetGridStyle()
         {
-            string name = NameBox.Text;
-            string category = CategoryBox.Text;
-            string description = DescriptionBox.Text;
+            // Change cell font style
+            dataGridView.DefaultCellStyle.Font = new Font("Arial", 12, FontStyle.Bold);
+            dataGridView.AllowUserToResizeColumns = false;
+            // Change cell background color
+            dataGridView.DefaultCellStyle.BackColor = Color.LightYellow;
 
-            Product product = new Product(name, category, description);
+            // Change cell text color
+            dataGridView.DefaultCellStyle.ForeColor = Color.Black;// Change row height
+            dataGridView.RowTemplate.Height = 30;
 
-            this.DB_CONNECTION = connect();
+            // Change row header text color
+            dataGridView.RowHeadersDefaultCellStyle.ForeColor = Color.Red;
 
-            string query = "INSERT INTO products_table (pname, pcategory, pdescription) VALUES (@name, @category, @description);";
-            MySqlCommand command = new MySqlCommand(query, DB_CONNECTION);
-            command.Parameters.AddWithValue("@name", product.productName);
-            command.Parameters.AddWithValue("@category", product.productCategory);
-            command.Parameters.AddWithValue("@description", product.productDescription);
-            command.ExecuteNonQuery();
+            // Change selected row color
+            dataGridView.RowsDefaultCellStyle.SelectionBackColor = Color.LightGray;
 
-            DB_CONNECTION.Close();
-            
-            displayItems(1);
+        }
 
+        private void Guna2Button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string name = NameBox.Text;
+                string category = CategoryBox.Text;
+                string description = DescriptionBox.Text;
+                double price = Double.Parse(PriceBox.Text);
+                string id = Product.generateID();
+                int quant = int.Parse(QuantityBox.Text);
 
+                Product product = new Product(name, category, description, price, quant, id);
+
+                this.DB_CONNECTION = Connect();
+
+                // Access the image from the pictureBox control
+                Image image = pictureBox.Image;
+
+                // Check if an image is present
+                if (image != null)
+                {
+                    // Convert the image to a byte array
+                    byte[] imageBytes;
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        image.Save(ms, image.RawFormat);
+                        imageBytes = ms.ToArray();
+                    }
+
+                    string query = "INSERT INTO products_table (pname, pcategory, pdescription, pprice,pquantity, id, pimage) VALUES (@name, @category, @description, @price,@quantity, @id, @image);";
+                    MySqlCommand command = new MySqlCommand(query, DB_CONNECTION);
+                    command.Parameters.AddWithValue("@name", product.productName);
+                    command.Parameters.AddWithValue("@category", product.productCategory);
+                    command.Parameters.AddWithValue("@description", product.productDescription);
+                    command.Parameters.AddWithValue("@price", product.price);
+                    command.Parameters.AddWithValue("@quantity", product.quantity);
+                    command.Parameters.AddWithValue("@id", product.id);
+                    command.Parameters.AddWithValue("@image", imageBytes);
+                    command.ExecuteNonQuery();
+                }
+
+                DB_CONNECTION.Close();
+
+                DisplayItems(1);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
 
 
-        public void displayItems(int state)
+
+
+        public void DisplayItems(int state)
         {
 
             if (state == 1)
@@ -69,32 +116,50 @@ namespace AppTest.Controllers
                 };
                 timer.Start();
 
-
+                DisplayTable();
             }
-
-            else {
+            else if (state == 2)
+            {
+                DeletingSuccessUC deletingSuccessUC = new DeletingSuccessUC();
+                ItemsContainer.Controls.Add(deletingSuccessUC);
+            }
+            else
+            {
                 Console.WriteLine("Error");
 
+                DisplayTable();
+
+
+
+
             }
+        }
 
 
 
 
-        } 
+        public void DisplayTable()
+        {
+            DataTable dataTable = new DataTable();
 
+            this.DB_CONNECTION = Connect();
+            string selectQuery = "SELECT * FROM products_table;";
+            MySqlCommand selectCommand = new MySqlCommand(selectQuery, DB_CONNECTION);
+            MySqlDataAdapter dataAdapter = new MySqlDataAdapter(selectCommand);
+            dataAdapter.Fill(dataTable);
 
-
-
-
+            DB_CONNECTION.Close();
+            dataGridView.DataSource = dataTable;
+        }
 
 
         private void BrowseButton_Click(object sender, EventArgs e)
         {
-        
+
         }
 
 
-        private MySqlConnection connect()
+        private MySqlConnection Connect()
         {
 
             string connectionString = "server=localhost;user=root;password=;database=app_db;";
@@ -116,6 +181,111 @@ namespace AppTest.Controllers
                 }
             }
 
+        }
+
+        private void Label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dataGridView.SelectedRows.Count > 0) // Check if a row is selected
+                {
+                    int selectedIndex = dataGridView.SelectedRows[0].Index;
+                    string id = dataGridView.Rows[selectedIndex].Cells["ID"].Value.ToString(); // Assuming the ID column name is "ID"
+
+                    this.DB_CONNECTION = Connect();
+
+                    string query = "DELETE FROM products_table WHERE id = @id;";
+                    MySqlCommand command = new MySqlCommand(query, DB_CONNECTION);
+                    command.Parameters.AddWithValue("@id", id);
+                    command.ExecuteNonQuery();
+
+                    DB_CONNECTION.Close();
+
+                    DisplayItems(2);
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                ClearField();
+            }
+        }
+
+
+
+        private void ClearField()
+        {
+            NameBox.Clear();
+            PriceBox.Clear();
+            DescriptionBox.Clear();
+            pictureBox.Image = null;
+            QuantityBox.Clear();
+        }
+
+
+
+
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string searchName = SearchBox.Text;
+
+                this.DB_CONNECTION = Connect();
+
+                string query = "SELECT * FROM products_table WHERE pname LIKE @search;";
+                MySqlCommand command = new MySqlCommand(query, DB_CONNECTION);
+                command.Parameters.AddWithValue("@search", "%" + searchName + "%");
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+                adapter.Fill(dataTable);
+
+                // Bind the DataTable to the DataGridView
+                dataGridView.DataSource = dataTable;
+
+                DB_CONNECTION.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void DataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            /*  try
+              {
+                  // Check if a row is double-clicked
+                  if (e.RowIndex >= 0)
+                  {
+                      // Get the selected row
+                      DataGridViewRow selectedRow = dataGridView.Rows[e.RowIndex];
+
+                      // Retrieve the selected item's data
+                      string name = selectedRow.Cells["pname"].Value.ToString();
+                      string category = selectedRow.Cells["pcategory"].Value.ToString();
+                      string description = selectedRow.Cells["pdescription"].Value.ToString();
+                      double price = Convert.ToDouble(selectedRow.Cells["pprice"].Value);
+
+                      ProductCardUC productCardUC = new ProductCardUC();
+                      ItemsContainer.Controls.Add(productCardUC);
+                  }
+              }
+              catch (Exception ex)
+              {
+                  MessageBox.Show(ex.Message);
+              }*/
         }
     }
 }

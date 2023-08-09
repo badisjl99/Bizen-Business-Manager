@@ -28,111 +28,114 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.Clients_Container = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.NormalClientButton = new System.Windows.Forms.Button();
+            this.Clients_Container.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // Clients_Container
             // 
-            this.panel1.BackColor = System.Drawing.Color.CadetBlue;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.guna2CircleButton2);
-            this.panel1.Location = new System.Drawing.Point(155, 58);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(346, 546);
-            this.panel1.TabIndex = 0;
+            this.Clients_Container.Controls.Add(this.panel2);
+            this.Clients_Container.Controls.Add(this.panel1);
+            this.Clients_Container.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Clients_Container.Location = new System.Drawing.Point(0, 0);
+            this.Clients_Container.Name = "Clients_Container";
+            this.Clients_Container.Size = new System.Drawing.Size(1240, 686);
+            this.Clients_Container.TabIndex = 2;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.SandyBrown;
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.guna2CircleButton1);
-            this.panel2.Location = new System.Drawing.Point(617, 58);
+            this.panel2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Location = new System.Drawing.Point(724, 86);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(346, 546);
+            this.panel2.Size = new System.Drawing.Size(367, 494);
             this.panel2.TabIndex = 1;
             // 
-            // guna2CircleButton1
+            // label3
             // 
-            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton1.FillColor = System.Drawing.Color.Indigo;
-            this.guna2CircleButton1.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton1.Location = new System.Drawing.Point(105, 206);
-            this.guna2CircleButton1.Name = "guna2CircleButton1";
-            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(136, 135);
-            this.guna2CircleButton1.TabIndex = 1;
-            this.guna2CircleButton1.Text = "Navigate";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(109, 124);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(165, 39);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Entreprise";
             // 
-            // guna2CircleButton2
+            // button2
             // 
-            this.guna2CircleButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton2.FillColor = System.Drawing.Color.Indigo;
-            this.guna2CircleButton2.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2CircleButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton2.Location = new System.Drawing.Point(112, 206);
-            this.guna2CircleButton2.Name = "guna2CircleButton2";
-            this.guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton2.Size = new System.Drawing.Size(136, 135);
-            this.guna2CircleButton2.TabIndex = 2;
-            this.guna2CircleButton2.Text = "Navigate";
+            this.button2.BackColor = System.Drawing.Color.Silver;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(126, 336);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(134, 40);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Edit";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Gold;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.NormalClientButton);
+            this.panel1.Location = new System.Drawing.Point(131, 86);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(367, 494);
+            this.panel1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Maiandra GD", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(86, 80);
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(75, 124);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 35);
-            this.label1.TabIndex = 3;
+            this.label1.Size = new System.Drawing.Size(222, 39);
+            this.label1.TabIndex = 1;
             this.label1.Text = "Normal Client";
             // 
-            // label2
+            // NormalClientButton
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Maiandra GD", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(118, 80);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 35);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Entreprise";
+            this.NormalClientButton.BackColor = System.Drawing.Color.Silver;
+            this.NormalClientButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NormalClientButton.Location = new System.Drawing.Point(115, 336);
+            this.NormalClientButton.Name = "NormalClientButton";
+            this.NormalClientButton.Size = new System.Drawing.Size(134, 40);
+            this.NormalClientButton.TabIndex = 0;
+            this.NormalClientButton.Text = "Edit";
+            this.NormalClientButton.UseVisualStyleBackColor = false;
+            this.NormalClientButton.Click += new System.EventHandler(this.NormalClientButton_Click);
             // 
             // ClientsUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Clients_Container);
             this.Name = "ClientsUC";
-            this.Size = new System.Drawing.Size(1117, 686);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Size = new System.Drawing.Size(1240, 686);
+            this.Clients_Container.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;
+        private System.Windows.Forms.Panel Clients_Container;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button NormalClientButton;
     }
 }
