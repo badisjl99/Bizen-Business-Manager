@@ -11,10 +11,7 @@ namespace AppTest.Master_Tools
         public MasterDashboardUC()
         {
             InitializeComponent();
-            UpdateClientCountLabel();
-            UpdateProductsCountLabel();
-            UpdateStaffCountLabel();
-            UpdateRevenuesLabel();
+            UpdateLabels();
             UpdateToDoGauge();
         }
 
@@ -24,9 +21,8 @@ namespace AppTest.Master_Tools
             ToDoGauge.Value = 100;
         }
 
-        private void UpdateRevenuesLabel()
+        private void UpdateLabels()
         {
-
             connection = APP_CONFIGURATION.ESTABLISH_DB_CONNECTION();
 
             string query = "SELECT SUM(total_price) FROM orders_table where status=1;";
@@ -45,62 +41,41 @@ namespace AppTest.Master_Tools
                 // If there are no orders or quantity is NULL, display 0
                 RevenuesLabel.Text = "0";
             }
-        }
-    
 
+            query = "SELECT COUNT(*) FROM products_table";
 
-        
-        private int UpdateProductsCountLabel()
-        {
-
-            connection = APP_CONFIGURATION.ESTABLISH_DB_CONNECTION();
-
-            string query = "SELECT COUNT(*) FROM products_table";
-
-            using (MySqlCommand command = new MySqlCommand(query, connection))
+            using (MySqlCommand command2 = new MySqlCommand(query, connection))
             {
                 // Execute the query and retrieve the result
-                int productsCount = Convert.ToInt32(command.ExecuteScalar());
+                int productsCount = Convert.ToInt32(command2.ExecuteScalar());
 
                 // Update the label with the client count
                 ProductCount.Text = productsCount.ToString();
-                return productsCount;
             }
-        }
 
-        private void UpdateStaffCountLabel()
-        {
+            query = "SELECT COUNT(*) FROM admin_tables where type ='normal_staff'";
 
-
-            connection = APP_CONFIGURATION.ESTABLISH_DB_CONNECTION();
-            string query = "SELECT COUNT(*) FROM admin_tables where type ='normal_staff'";
-
-            using (MySqlCommand command = new MySqlCommand(query, connection))
+            using (MySqlCommand command3 = new MySqlCommand(query, connection))
             {
                 // Execute the query and retrieve the result
-                int staffcount = Convert.ToInt32(command.ExecuteScalar());
+                int staffcount = Convert.ToInt32(command3.ExecuteScalar());
 
                 // Update the label with the client count
                 TotalStaffLabel.Text = staffcount.ToString();
             }
-        }
-        private void UpdateClientCountLabel()
-        {
 
+            query = "SELECT COUNT(*) FROM normal_clients_table";
 
-            connection = APP_CONFIGURATION.ESTABLISH_DB_CONNECTION();
-            string query = "SELECT COUNT(*) FROM normal_clients_table";
-
-            using (MySqlCommand command = new MySqlCommand(query, connection))
+            using (MySqlCommand command4 = new MySqlCommand(query, connection))
             {
                 // Execute the query and retrieve the result
-                int clientCount = Convert.ToInt32(command.ExecuteScalar());
+                int clientCount = Convert.ToInt32(command4.ExecuteScalar());
 
                 // Update the label with the client count
                 ClientsCount.Text = clientCount.ToString();
             }
         }
 
-        
+
     }
 }
