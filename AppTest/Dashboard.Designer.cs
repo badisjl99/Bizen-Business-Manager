@@ -38,8 +38,8 @@
             this.ProductsTogglePanel = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.MeetingButton = new Guna.UI2.WinForms.Guna2Button();
-            this.ResourcesButton = new Guna.UI2.WinForms.Guna2Button();
             this.ProductsToggle = new Guna.UI2.WinForms.Guna2Button();
+            this.ResourcesButton = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.DashboardButton = new Guna.UI2.WinForms.Guna2Button();
@@ -239,35 +239,6 @@
             this.MeetingButton.Text = "Show Room";
             this.MeetingButton.Click += new System.EventHandler(this.MeetingButton_Click);
             // 
-            // ResourcesButton
-            // 
-            this.ResourcesButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ResourcesButton.BackColor = System.Drawing.Color.Transparent;
-            this.ResourcesButton.BorderColor = System.Drawing.Color.Transparent;
-            this.ResourcesButton.BorderRadius = 7;
-            this.ResourcesButton.BorderThickness = 1;
-            this.ResourcesButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.ResourcesButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.ResourcesButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.ResourcesButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.ResourcesButton.FillColor = System.Drawing.Color.Transparent;
-            this.ResourcesButton.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold);
-            this.ResourcesButton.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.ResourcesButton.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.ResourcesButton.HoverState.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.ResourcesButton.HoverState.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.ResourcesButton.Image = ((System.Drawing.Image)(resources.GetObject("ResourcesButton.Image")));
-            this.ResourcesButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.ResourcesButton.ImageOffset = new System.Drawing.Point(7, 0);
-            this.ResourcesButton.ImageSize = new System.Drawing.Size(35, 35);
-            this.ResourcesButton.Location = new System.Drawing.Point(4, 48);
-            this.ResourcesButton.Name = "ResourcesButton";
-            this.ResourcesButton.Padding = new System.Windows.Forms.Padding(8);
-            this.ResourcesButton.Size = new System.Drawing.Size(229, 32);
-            this.ResourcesButton.TabIndex = 12;
-            this.ResourcesButton.Text = "Add Product";
-            this.ResourcesButton.Click += new System.EventHandler(this.ResourcesButton_Click);
-            // 
             // ProductsToggle
             // 
             this.ProductsToggle.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -298,6 +269,35 @@
             this.ProductsToggle.TextOffset = new System.Drawing.Point(11, 0);
             this.ProductsToggle.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             this.ProductsToggle.Click += new System.EventHandler(this.ProductsToggle_Click);
+            // 
+            // ResourcesButton
+            // 
+            this.ResourcesButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ResourcesButton.BackColor = System.Drawing.Color.Transparent;
+            this.ResourcesButton.BorderColor = System.Drawing.Color.Transparent;
+            this.ResourcesButton.BorderRadius = 7;
+            this.ResourcesButton.BorderThickness = 1;
+            this.ResourcesButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ResourcesButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ResourcesButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ResourcesButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ResourcesButton.FillColor = System.Drawing.Color.Transparent;
+            this.ResourcesButton.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold);
+            this.ResourcesButton.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.ResourcesButton.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.ResourcesButton.HoverState.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.ResourcesButton.HoverState.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.ResourcesButton.Image = ((System.Drawing.Image)(resources.GetObject("ResourcesButton.Image")));
+            this.ResourcesButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.ResourcesButton.ImageOffset = new System.Drawing.Point(7, 0);
+            this.ResourcesButton.ImageSize = new System.Drawing.Size(35, 35);
+            this.ResourcesButton.Location = new System.Drawing.Point(4, 48);
+            this.ResourcesButton.Name = "ResourcesButton";
+            this.ResourcesButton.Padding = new System.Windows.Forms.Padding(8);
+            this.ResourcesButton.Size = new System.Drawing.Size(229, 32);
+            this.ResourcesButton.TabIndex = 12;
+            this.ResourcesButton.Text = "Add Product";
+            this.ResourcesButton.Click += new System.EventHandler(this.ResourcesButton_Click);
             // 
             // label3
             // 
