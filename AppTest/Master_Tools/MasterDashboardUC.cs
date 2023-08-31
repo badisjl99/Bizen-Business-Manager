@@ -3,6 +3,7 @@ using LiveCharts.WinForms;
 using LiveCharts.Wpf;
 using MySql.Data.MySqlClient;
 using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace AppTest.Master_Tools
@@ -54,13 +55,14 @@ namespace AppTest.Master_Tools
         }
 
 
-
         private void UpdateToDoGauge()
         {
-            ToDoGauge.To = 50;
-            ToDoGauge.Value = 100;
+           
+                    ToDoGauge.To = 50;
+                    ToDoGauge.Value = 5;
+         
+            
         }
-
         private void UpdateLabels()
         {
             connection = APP_CONFIGURATION.ESTABLISH_DB_CONNECTION();
