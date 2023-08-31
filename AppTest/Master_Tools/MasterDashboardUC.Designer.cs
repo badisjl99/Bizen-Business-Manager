@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MasterDashboardUC));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.RevenuesLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.rect2 = new Guna.UI2.WinForms.Guna2Panel();
@@ -49,6 +48,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pieChart1 = new LiveCharts.WinForms.PieChart();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.rect2.SuspendLayout();
@@ -63,6 +63,7 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.MintCream;
             this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -84,25 +85,13 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.RevenuesLabel);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(1301, 38);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(303, 176);
             this.panel1.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Sitka Subheading", 24.75F);
-            this.label1.Location = new System.Drawing.Point(265, 90);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 48);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "$";
             // 
             // RevenuesLabel
             // 
@@ -209,7 +198,6 @@
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.TotalStaffLabel);
             this.panel2.Controls.Add(this.label5);
@@ -247,6 +235,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.ToDoGauge, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.pieChart1, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(167, 316);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
@@ -258,9 +247,9 @@
             // ToDoGauge
             // 
             this.ToDoGauge.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ToDoGauge.Location = new System.Drawing.Point(749, 99);
+            this.ToDoGauge.Location = new System.Drawing.Point(779, 104);
             this.ToDoGauge.Name = "ToDoGauge";
-            this.ToDoGauge.Size = new System.Drawing.Size(534, 282);
+            this.ToDoGauge.Size = new System.Drawing.Size(473, 272);
             this.ToDoGauge.TabIndex = 0;
             this.ToDoGauge.Text = "solidGauge1";
             // 
@@ -304,6 +293,15 @@
             this.pictureBox4.TabIndex = 6;
             this.pictureBox4.TabStop = false;
             // 
+            // pieChart1
+            // 
+            this.pieChart1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pieChart1.Location = new System.Drawing.Point(78, 77);
+            this.pieChart1.Name = "pieChart1";
+            this.pieChart1.Size = new System.Drawing.Size(521, 326);
+            this.pieChart1.TabIndex = 1;
+            this.pieChart1.Text = "pieChart1";
+            // 
             // MasterDashboardUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -345,12 +343,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label RevenuesLabel;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private LiveCharts.WinForms.SolidGauge ToDoGauge;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private LiveCharts.WinForms.PieChart pieChart1;
     }
 }
