@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MasterDashboardUC));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.RevenuesLabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.rect2 = new Guna.UI2.WinForms.Guna2Panel();
             this.ProductCount = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,15 +43,14 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.TotalStaffLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.RevenuesLabel = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.ToDoGauge = new LiveCharts.WinForms.SolidGauge();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.rect2.SuspendLayout();
             this.rect1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -67,6 +70,50 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1661, 252);
             this.tableLayoutPanel1.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.BackColor = System.Drawing.Color.Salmon;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.RevenuesLabel);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(1301, 38);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(303, 176);
+            this.panel1.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Sitka Subheading", 24.75F);
+            this.label1.Location = new System.Drawing.Point(265, 90);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 48);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "$";
+            // 
+            // RevenuesLabel
+            // 
+            this.RevenuesLabel.AutoSize = true;
+            this.RevenuesLabel.BackColor = System.Drawing.Color.Transparent;
+            this.RevenuesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold);
+            this.RevenuesLabel.Location = new System.Drawing.Point(22, 92);
+            this.RevenuesLabel.Name = "RevenuesLabel";
+            this.RevenuesLabel.Size = new System.Drawing.Size(43, 46);
+            this.RevenuesLabel.TabIndex = 4;
+            this.RevenuesLabel.Text = "0";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Sitka Subheading", 21.75F);
+            this.label2.Location = new System.Drawing.Point(24, 33);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(227, 42);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Total Revenues :";
             // 
             // rect2
             // 
@@ -177,66 +224,47 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Total Staff :";
             // 
-            // panel1
+            // tableLayoutPanel2
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.BackColor = System.Drawing.Color.Salmon;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.RevenuesLabel);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(1301, 38);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(303, 176);
-            this.panel1.TabIndex = 5;
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.ToDoGauge, 1, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(167, 316);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1355, 481);
+            this.tableLayoutPanel2.TabIndex = 3;
             // 
-            // RevenuesLabel
+            // ToDoGauge
             // 
-            this.RevenuesLabel.AutoSize = true;
-            this.RevenuesLabel.BackColor = System.Drawing.Color.Transparent;
-            this.RevenuesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold);
-            this.RevenuesLabel.Location = new System.Drawing.Point(22, 92);
-            this.RevenuesLabel.Name = "RevenuesLabel";
-            this.RevenuesLabel.Size = new System.Drawing.Size(43, 46);
-            this.RevenuesLabel.TabIndex = 4;
-            this.RevenuesLabel.Text = "0";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Sitka Subheading", 21.75F);
-            this.label2.Location = new System.Drawing.Point(24, 33);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(227, 42);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Total Revenues :";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Sitka Subheading", 24.75F);
-            this.label1.Location = new System.Drawing.Point(265, 90);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 48);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "$";
+            this.ToDoGauge.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ToDoGauge.Location = new System.Drawing.Point(749, 99);
+            this.ToDoGauge.Name = "ToDoGauge";
+            this.ToDoGauge.Size = new System.Drawing.Size(534, 282);
+            this.ToDoGauge.TabIndex = 0;
+            this.ToDoGauge.Text = "solidGauge1";
             // 
             // MasterDashboardUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "MasterDashboardUC";
             this.Size = new System.Drawing.Size(1667, 877);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.rect2.ResumeLayout(false);
             this.rect2.PerformLayout();
             this.rect1.ResumeLayout(false);
             this.rect1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -257,5 +285,7 @@
         private System.Windows.Forms.Label RevenuesLabel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private LiveCharts.WinForms.SolidGauge ToDoGauge;
     }
 }

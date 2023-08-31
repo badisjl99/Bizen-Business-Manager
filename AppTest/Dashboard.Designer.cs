@@ -174,7 +174,7 @@
             this.CRMButton.HoverState.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.CRMButton.Image = ((System.Drawing.Image)(resources.GetObject("CRMButton.Image")));
             this.CRMButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.CRMButton.ImageOffset = new System.Drawing.Point(7, 0);
+            this.CRMButton.ImageOffset = new System.Drawing.Point(5, 0);
             this.CRMButton.ImageSize = new System.Drawing.Size(30, 30);
             this.CRMButton.Location = new System.Drawing.Point(0, 0);
             this.CRMButton.Name = "CRMButton";
@@ -259,7 +259,6 @@
             this.ProductsToggle.HoverState.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.ProductsToggle.Image = ((System.Drawing.Image)(resources.GetObject("ProductsToggle.Image")));
             this.ProductsToggle.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.ProductsToggle.ImageOffset = new System.Drawing.Point(7, 0);
             this.ProductsToggle.ImageSize = new System.Drawing.Size(30, 30);
             this.ProductsToggle.Location = new System.Drawing.Point(4, 3);
             this.ProductsToggle.Name = "ProductsToggle";
@@ -338,8 +337,8 @@
             this.DashboardButton.HoverState.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.DashboardButton.Image = ((System.Drawing.Image)(resources.GetObject("DashboardButton.Image")));
             this.DashboardButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.DashboardButton.ImageOffset = new System.Drawing.Point(7, 0);
-            this.DashboardButton.ImageSize = new System.Drawing.Size(30, 30);
+            this.DashboardButton.ImageOffset = new System.Drawing.Point(9, 0);
+            this.DashboardButton.ImageSize = new System.Drawing.Size(26, 26);
             this.DashboardButton.Location = new System.Drawing.Point(3, 3);
             this.DashboardButton.Name = "DashboardButton";
             this.DashboardButton.Size = new System.Drawing.Size(229, 39);

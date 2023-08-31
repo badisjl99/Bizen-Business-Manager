@@ -13,6 +13,7 @@ namespace AppTest.Login
         public MasterHome(Admin admin1)
         {
             InitializeComponent();
+            Container.Controls.Add(new MasterDashboardUC());
             admin = admin1;
 
             SetAdminData();

@@ -94,8 +94,10 @@ namespace AppTest.Controllers
 
         public void RetrieveReciepientsMails()
         {
+
+            string CurrentUserMail = RequestsButton.admin.email;
             MySqlConnection connection = APP_CONFIGURATION.ESTABLISH_DB_CONNECTION();
-            string query = "SELECT email FROM admin_tables;";
+            string query = "SELECT email FROM admin_tables WHERE email <> '"+CurrentUserMail+"';";
 
             using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection))
             {

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.StaffBox = new System.Windows.Forms.ComboBox();
             this.TaskBox = new System.Windows.Forms.TextBox();
             this.AssignButton = new Guna.UI2.WinForms.Guna2GradientTileButton();
@@ -50,7 +50,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.StaffBox.FormattingEnabled = true;
-            this.StaffBox.Location = new System.Drawing.Point(37, 276);
+            this.StaffBox.Location = new System.Drawing.Point(32, 186);
             this.StaffBox.Name = "StaffBox";
             this.StaffBox.Size = new System.Drawing.Size(295, 21);
             this.StaffBox.TabIndex = 1;
@@ -60,16 +60,14 @@
             this.TaskBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TaskBox.Location = new System.Drawing.Point(37, 337);
+            this.TaskBox.Location = new System.Drawing.Point(32, 247);
             this.TaskBox.Name = "TaskBox";
             this.TaskBox.Size = new System.Drawing.Size(295, 20);
             this.TaskBox.TabIndex = 2;
             // 
             // AssignButton
             // 
-            this.AssignButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.AssignButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AssignButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.AssignButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.AssignButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -77,7 +75,7 @@
             this.AssignButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.AssignButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AssignButton.ForeColor = System.Drawing.Color.White;
-            this.AssignButton.Location = new System.Drawing.Point(131, 429);
+            this.AssignButton.Location = new System.Drawing.Point(123, 312);
             this.AssignButton.Name = "AssignButton";
             this.AssignButton.Size = new System.Drawing.Size(109, 36);
             this.AssignButton.TabIndex = 3;
@@ -93,9 +91,9 @@
             this.panel1.Controls.Add(this.StaffBox);
             this.panel1.Controls.Add(this.AssignButton);
             this.panel1.Controls.Add(this.TaskBox);
-            this.panel1.Location = new System.Drawing.Point(87, 59);
+            this.panel1.Location = new System.Drawing.Point(89, 175);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(356, 588);
+            this.panel1.Size = new System.Drawing.Size(356, 383);
             this.panel1.TabIndex = 4;
             // 
             // label3
@@ -106,7 +104,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label3.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label3.Location = new System.Drawing.Point(43, 317);
+            this.label3.Location = new System.Drawing.Point(38, 227);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 17);
             this.label3.TabIndex = 6;
@@ -120,7 +118,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label2.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label2.Location = new System.Drawing.Point(43, 256);
+            this.label2.Location = new System.Drawing.Point(38, 166);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 17);
             this.label2.TabIndex = 5;
@@ -134,7 +132,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
             this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label1.Location = new System.Drawing.Point(72, 126);
+            this.label1.Location = new System.Drawing.Point(69, 85);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(222, 29);
             this.label1.TabIndex = 4;
@@ -142,24 +140,24 @@
             // 
             // dataGridView
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.dataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.dataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.OldLace;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.OldLace;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView.GridColor = System.Drawing.SystemColors.ControlLight;
-            this.dataGridView.Location = new System.Drawing.Point(606, 59);
+            this.dataGridView.Location = new System.Drawing.Point(608, 175);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(896, 588);
+            this.dataGridView.Size = new System.Drawing.Size(896, 383);
             this.dataGridView.TabIndex = 5;
             // 
             // ApproveTaskButton
@@ -167,7 +165,7 @@
             this.ApproveTaskButton.BackColor = System.Drawing.Color.YellowGreen;
             this.ApproveTaskButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.ApproveTaskButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ApproveTaskButton.Location = new System.Drawing.Point(1397, 23);
+            this.ApproveTaskButton.Location = new System.Drawing.Point(1399, 139);
             this.ApproveTaskButton.Name = "ApproveTaskButton";
             this.ApproveTaskButton.Size = new System.Drawing.Size(90, 30);
             this.ApproveTaskButton.TabIndex = 6;
@@ -180,7 +178,7 @@
             this.DeleteButton.BackColor = System.Drawing.Color.Crimson;
             this.DeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.DeleteButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DeleteButton.Location = new System.Drawing.Point(1301, 23);
+            this.DeleteButton.Location = new System.Drawing.Point(1303, 139);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(90, 30);
             this.DeleteButton.TabIndex = 7;

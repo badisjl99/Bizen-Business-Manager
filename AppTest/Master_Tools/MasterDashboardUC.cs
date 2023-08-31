@@ -15,6 +15,13 @@ namespace AppTest.Master_Tools
             UpdateProductsCountLabel();
             UpdateStaffCountLabel();
             UpdateRevenuesLabel();
+            UpdateToDoGauge();
+        }
+
+        private void UpdateToDoGauge()
+        {
+            ToDoGauge.To = 50;
+            ToDoGauge.Value = 100;
         }
 
         private void UpdateRevenuesLabel()
