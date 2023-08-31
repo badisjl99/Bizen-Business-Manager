@@ -33,19 +33,21 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Container = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.RevenuesLabel = new System.Windows.Forms.Label();
             this.TotalSalesLabel = new System.Windows.Forms.Label();
             this.TotalOrdersLabel = new System.Windows.Forms.Label();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.TotalRevenuesLabel = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.ApproveButton = new System.Windows.Forms.Button();
+            this.DeclineButton = new System.Windows.Forms.Button();
             this.OrdersTable = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ApprovedLabel = new System.Windows.Forms.Label();
-            this.PendingLabel = new System.Windows.Forms.Label();
             this.DeclinedLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.SearchButton = new System.Windows.Forms.Button();
@@ -54,10 +56,6 @@
             this.ExportButton = new System.Windows.Forms.Button();
             this.CreateOrderButton = new System.Windows.Forms.Button();
             this.Search_Bar = new System.Windows.Forms.TextBox();
-            this.DeclineButton = new System.Windows.Forms.Button();
-            this.ApproveButton = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.Container.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -94,6 +92,30 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(607, 198);
             this.panel4.TabIndex = 5;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.PeachPuff;
+            this.label6.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label6.Location = new System.Drawing.Point(266, 121);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(192, 26);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Total Revenues :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.PeachPuff;
+            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(265, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(146, 52);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "\nTotal Sales :";
             // 
             // RevenuesLabel
             // 
@@ -161,6 +183,28 @@
             this.panel3.Size = new System.Drawing.Size(1042, 276);
             this.panel3.TabIndex = 6;
             // 
+            // ApproveButton
+            // 
+            this.ApproveButton.BackColor = System.Drawing.Color.Chartreuse;
+            this.ApproveButton.Location = new System.Drawing.Point(951, 244);
+            this.ApproveButton.Name = "ApproveButton";
+            this.ApproveButton.Size = new System.Drawing.Size(75, 23);
+            this.ApproveButton.TabIndex = 3;
+            this.ApproveButton.Text = "Approve";
+            this.ApproveButton.UseVisualStyleBackColor = false;
+            this.ApproveButton.Click += new System.EventHandler(this.ApproveButton_Click);
+            // 
+            // DeclineButton
+            // 
+            this.DeclineButton.BackColor = System.Drawing.Color.OrangeRed;
+            this.DeclineButton.Location = new System.Drawing.Point(870, 244);
+            this.DeclineButton.Name = "DeclineButton";
+            this.DeclineButton.Size = new System.Drawing.Size(75, 23);
+            this.DeclineButton.TabIndex = 2;
+            this.DeclineButton.Text = "Decline";
+            this.DeclineButton.UseVisualStyleBackColor = false;
+            this.DeclineButton.Click += new System.EventHandler(this.DeclineButton_Click);
+            // 
             // OrdersTable
             // 
             dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Info;
@@ -201,10 +245,8 @@
             this.panel2.BackColor = System.Drawing.Color.PeachPuff;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.ApprovedLabel);
-            this.panel2.Controls.Add(this.PendingLabel);
             this.panel2.Controls.Add(this.DeclinedLabel);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(769, 104);
             this.panel2.Name = "panel2";
@@ -216,29 +258,18 @@
             this.ApprovedLabel.AutoSize = true;
             this.ApprovedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F);
             this.ApprovedLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ApprovedLabel.Location = new System.Drawing.Point(152, 22);
+            this.ApprovedLabel.Location = new System.Drawing.Point(161, 48);
             this.ApprovedLabel.Name = "ApprovedLabel";
             this.ApprovedLabel.Size = new System.Drawing.Size(52, 29);
             this.ApprovedLabel.TabIndex = 6;
             this.ApprovedLabel.Text = "234";
-            // 
-            // PendingLabel
-            // 
-            this.PendingLabel.AutoSize = true;
-            this.PendingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F);
-            this.PendingLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.PendingLabel.Location = new System.Drawing.Point(151, 75);
-            this.PendingLabel.Name = "PendingLabel";
-            this.PendingLabel.Size = new System.Drawing.Size(26, 29);
-            this.PendingLabel.TabIndex = 7;
-            this.PendingLabel.Text = "9";
             // 
             // DeclinedLabel
             // 
             this.DeclinedLabel.AutoSize = true;
             this.DeclinedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F);
             this.DeclinedLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.DeclinedLabel.Location = new System.Drawing.Point(151, 128);
+            this.DeclinedLabel.Location = new System.Drawing.Point(162, 98);
             this.DeclinedLabel.Name = "DeclinedLabel";
             this.DeclinedLabel.Size = new System.Drawing.Size(26, 29);
             this.DeclinedLabel.TabIndex = 8;
@@ -250,23 +281,11 @@
             this.label5.BackColor = System.Drawing.Color.PeachPuff;
             this.label5.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.label5.Location = new System.Drawing.Point(17, 75);
+            this.label5.Location = new System.Drawing.Point(26, 101);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(120, 26);
             this.label5.TabIndex = 3;
             this.label5.Text = "Pending : ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.PeachPuff;
-            this.label4.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(17, 126);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 26);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Declined :";
             // 
             // label3
             // 
@@ -274,7 +293,7 @@
             this.label3.BackColor = System.Drawing.Color.PeachPuff;
             this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label3.Location = new System.Drawing.Point(17, 22);
+            this.label3.Location = new System.Drawing.Point(26, 48);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(129, 26);
             this.label3.TabIndex = 1;
@@ -365,51 +384,6 @@
             this.Search_Bar.Size = new System.Drawing.Size(332, 20);
             this.Search_Bar.TabIndex = 0;
             // 
-            // DeclineButton
-            // 
-            this.DeclineButton.BackColor = System.Drawing.Color.OrangeRed;
-            this.DeclineButton.Location = new System.Drawing.Point(870, 244);
-            this.DeclineButton.Name = "DeclineButton";
-            this.DeclineButton.Size = new System.Drawing.Size(75, 23);
-            this.DeclineButton.TabIndex = 2;
-            this.DeclineButton.Text = "Decline";
-            this.DeclineButton.UseVisualStyleBackColor = false;
-            // 
-            // ApproveButton
-            // 
-            this.ApproveButton.BackColor = System.Drawing.Color.Chartreuse;
-            this.ApproveButton.Location = new System.Drawing.Point(951, 244);
-            this.ApproveButton.Name = "ApproveButton";
-            this.ApproveButton.Size = new System.Drawing.Size(75, 23);
-            this.ApproveButton.TabIndex = 3;
-            this.ApproveButton.Text = "Approve";
-            this.ApproveButton.UseVisualStyleBackColor = false;
-            this.ApproveButton.Click += new System.EventHandler(this.ApproveButton_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.PeachPuff;
-            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(265, 47);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 52);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "\nTotal Sales :";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.PeachPuff;
-            this.label6.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(266, 121);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(192, 26);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Total Revenues :";
-            // 
             // OrdersUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -443,10 +417,8 @@
         private System.Windows.Forms.DataGridView OrdersTable;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label ApprovedLabel;
-        private System.Windows.Forms.Label PendingLabel;
         private System.Windows.Forms.Label DeclinedLabel;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;

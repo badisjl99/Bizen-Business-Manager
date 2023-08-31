@@ -1,4 +1,7 @@
-﻿using MySql.Data.MySqlClient;
+﻿using LiveCharts;
+using LiveCharts.WinForms;
+using LiveCharts.Wpf;
+using MySql.Data.MySqlClient;
 using System;
 using System.Windows.Forms;
 
@@ -8,12 +11,49 @@ namespace AppTest.Master_Tools
     {
 
         MySqlConnection connection;
+
         public MasterDashboardUC()
         {
             InitializeComponent();
             UpdateLabels();
             UpdateToDoGauge();
+            InitializePieChart();
         }
+
+
+        private void InitializePieChart()
+        {
+            connection = APP_CONFIGURATION.ESTABLISH_DB_CONNECTION();
+
+            // Query to get the count of each product category
+            string query = "SELECT pcategory, COUNT(*) as categoryCount FROM products_table GROUP BY pcategory";
+
+            MySqlCommand command = new MySqlCommand(query, connection);
+            MySqlDataReader reader = command.ExecuteReader();
+
+            SeriesCollection pieSeries = new SeriesCollection();
+
+            while (reader.Read())
+            {
+                string category = reader["pcategory"].ToString();
+                int categoryCount = Convert.ToInt32(reader["categoryCount"]);
+
+                // Create a pie chart segment for each category
+                pieSeries.Add(new PieSeries
+                {
+                    Title = category,
+                    Values = new ChartValues<int> { categoryCount }
+                });
+            }
+
+            // Bind the pieSeries to the CategoryPieChart
+            CategoryPieChart.Series = pieSeries;
+
+            connection.Close();
+        
+        }
+
+
 
         private void UpdateToDoGauge()
         {
@@ -75,7 +115,5 @@ namespace AppTest.Master_Tools
                 ClientsCount.Text = clientCount.ToString();
             }
         }
-
-
     }
 }

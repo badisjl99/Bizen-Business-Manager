@@ -39,115 +39,47 @@ namespace AppTest.Controllers
             return connection;
         }
 
-        private void SetLabels()
+        private void UpdateLabelWithQuery(string query, Label label, bool isCurrency = false)
         {
             try
             {
-                this.DB_CONNECTION = Connect();
-
-                string query = "SELECT COUNT(*) FROM orders_table;";
-                MySqlCommand command = new MySqlCommand(query, DB_CONNECTION);
-
-                int rowCount = Convert.ToInt32(command.ExecuteScalar());
-
-                DB_CONNECTION.Close();
-
-                // Assuming TotalOrdersLabel is the name of your label control
-                TotalOrdersLabel.Text = rowCount.ToString();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            try
-            {
-                this.DB_CONNECTION = Connect();
-
-                string query = "SELECT SUM(quantity) FROM orders_table;";
-                MySqlCommand command = new MySqlCommand(query, DB_CONNECTION);
-
-                object result = command.ExecuteScalar();
-
-                // Check if the result is DBNull or null
-                if (result != null && result != DBNull.Value)
+                using (this.DB_CONNECTION = Connect())
                 {
-                    int totalSales = Convert.ToInt32(result);
-                    TotalSalesLabel.Text = totalSales.ToString();
-                }
-                else
-                {
-                    // If there are no orders or quantity is NULL, display 0
-                    TotalSalesLabel.Text = "0";
-                }
+                    MySqlCommand command = new MySqlCommand(query, DB_CONNECTION);
+                    object result = command.ExecuteScalar();
 
-                DB_CONNECTION.Close();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        if (isCurrency)
+                        {
+                            double value = Convert.ToDouble(result);
+                            label.Text = $"{value.ToString("C")}"; // Display as currency
+                        }
+                        else
+                        {
+                            int intValue = Convert.ToInt32(result);
+                            label.Text = intValue.ToString();
+                        }
+                    }
+                    else
+                    {
+                        label.Text = isCurrency ? "$0" : "0";
+                    }
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
 
-            try
-            {
-                this.DB_CONNECTION = Connect();
-
-                string query = "SELECT SUM(total_price) FROM orders_table where status=1;";
-                MySqlCommand command = new MySqlCommand(query, DB_CONNECTION);
-
-                object result = command.ExecuteScalar();
-
-                // Check if the result is DBNull or null
-                if (result != null && result != DBNull.Value)
-                {
-                    double totalSales = Convert.ToDouble(result);
-                    RevenuesLabel.Text = $"{totalSales.ToString()} $";
-                }
-                else
-                {
-                    // If there are no orders or quantity is NULL, display 0
-                    RevenuesLabel.Text = "0";
-                }
-
-                DB_CONNECTION.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            try
-            {
-                this.DB_CONNECTION = Connect();
-
-                string query = "SELECT COUNT(*) FROM orders_table WHERE status = 1;";
-                MySqlCommand command = new MySqlCommand(query, DB_CONNECTION);
-
-                int approvedCount = Convert.ToInt32(command.ExecuteScalar());
-
-                ApprovedLabel.Text = approvedCount.ToString();
-
-                DB_CONNECTION.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            try
-            {
-                this.DB_CONNECTION = Connect();
-
-                string query = "SELECT COUNT(*) FROM orders_table WHERE status = 0;";
-                MySqlCommand command = new MySqlCommand(query, DB_CONNECTION);
-
-                int approvedCount = Convert.ToInt32(command.ExecuteScalar());
-
-                DeclinedLabel.Text = approvedCount.ToString();
-
-                DB_CONNECTION.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+        private void SetLabels()
+        {
+            UpdateLabelWithQuery("SELECT COUNT(*) FROM orders_table;", TotalOrdersLabel);
+            UpdateLabelWithQuery("SELECT SUM(quantity) FROM orders_table;", TotalSalesLabel);
+            UpdateLabelWithQuery("SELECT SUM(total_price) FROM orders_table WHERE status = 1;", RevenuesLabel, true);
+            UpdateLabelWithQuery("SELECT COUNT(*) FROM orders_table WHERE status = 1;", ApprovedLabel);
+            UpdateLabelWithQuery("SELECT COUNT(*) FROM orders_table WHERE status = 0;", DeclinedLabel);
         }
 
 
@@ -248,6 +180,43 @@ namespace AppTest.Controllers
                     cell.Style.BackColor = Color.Red;
                     cell.Style.ForeColor = Color.White;
                 }
+            }
+        }
+
+        private void DeclineButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (OrdersTable.SelectedRows.Count > 0)
+                {
+                    int selectedIndex = OrdersTable.SelectedRows[0].Index;
+                    string id = OrdersTable.Rows[selectedIndex].Cells["REF"].Value.ToString();
+                    this.DB_CONNECTION = Connect();
+
+                    // First, we retrieve the current status of the selected order
+                    string query = "SELECT status FROM orders_table WHERE REF = @id;";
+                    MySqlCommand command = new MySqlCommand(query, DB_CONNECTION);
+                    command.Parameters.AddWithValue("@id", id);
+
+
+                    bool currentStatus = Convert.ToBoolean(command.ExecuteScalar());
+
+
+                    bool newStatus = !currentStatus;
+
+                    // Update the 'status' column with the new value
+                    query = "UPDATE orders_table SET status = @newStatus WHERE REF = @id;";
+                    command = new MySqlCommand(query, DB_CONNECTION);
+                    command.Parameters.AddWithValue("@newStatus", newStatus);
+                    command.Parameters.AddWithValue("@id", id);
+                    command.ExecuteNonQuery();
+
+                    DB_CONNECTION.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }
