@@ -602,16 +602,14 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="World.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Controllers\Bot.py" />
+    <Content Include="Controllers\World.xml" />
     <Content Include="External_Scripts\Trends_Page.html" />
+    <Content Include="Tools\World.xml" />
+    <Content Include="World.xml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup />

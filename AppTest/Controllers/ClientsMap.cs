@@ -32,7 +32,7 @@ namespace AppTest.Controllers
             };
             geoMap.HeatMap = keyValues;
 
-            geoMap.Source = $"{Application.StartupPath}\\World.xml";
+            geoMap.Source = $"C:\\Users\\Badis\\source\\repos\\AppTest\\AppTest\\World.xml";
             this.Controls.Add(geoMap);
             geoMap.Dock = DockStyle.Top;
             geoMap.BackColor = Color.SeaShell;
