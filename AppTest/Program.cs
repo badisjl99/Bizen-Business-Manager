@@ -1,4 +1,5 @@
 ﻿using AppTest.AppLogin;
+using AppTest.Controllers;
 using AppTest.Models;
 using System;
 using System.Windows.Forms;
@@ -12,7 +13,9 @@ namespace AppTest
         /// </summary>
         [STAThread]
         static void Main()
-        { 
+        {
+
+           
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             // Application.Run(new SignUpForm());

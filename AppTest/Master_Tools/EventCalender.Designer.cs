@@ -28,8 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label9 = new System.Windows.Forms.Label();
@@ -43,14 +54,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -95,6 +98,116 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1158, 542);
             this.panel2.TabIndex = 3;
+            // 
+            // panel6
+            // 
+            this.panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel6.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Location = new System.Drawing.Point(1106, 270);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(19, 17);
+            this.panel6.TabIndex = 52;
+            // 
+            // label14
+            // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Verdana", 9F);
+            this.label14.ForeColor = System.Drawing.Color.DimGray;
+            this.label14.Location = new System.Drawing.Point(1057, 273);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(43, 14);
+            this.label14.TabIndex = 51;
+            this.label14.Text = "Event";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel5.BackColor = System.Drawing.Color.Lime;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Location = new System.Drawing.Point(1106, 247);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(19, 17);
+            this.panel5.TabIndex = 50;
+            // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Verdana", 9F);
+            this.label13.ForeColor = System.Drawing.Color.DimGray;
+            this.label13.Location = new System.Drawing.Point(1043, 250);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(57, 14);
+            this.label13.TabIndex = 49;
+            this.label13.Text = "Meeting";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel4.BackColor = System.Drawing.Color.Pink;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Location = new System.Drawing.Point(1106, 224);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(19, 17);
+            this.panel4.TabIndex = 48;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Verdana", 9F);
+            this.label12.ForeColor = System.Drawing.Color.DimGray;
+            this.label12.Location = new System.Drawing.Point(1036, 224);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(70, 14);
+            this.label12.TabIndex = 47;
+            this.label12.Text = "Important";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel3.BackColor = System.Drawing.SystemColors.Control;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Location = new System.Drawing.Point(83, 368);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1043, 154);
+            this.panel3.TabIndex = 46;
+            // 
+            // dataGridView1
+            // 
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("MS PGothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle12;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1041, 152);
+            this.dataGridView1.TabIndex = 0;
             // 
             // monthCalendar1
             // 
@@ -252,92 +365,6 @@
             this.label1.Size = new System.Drawing.Size(150, 42);
             this.label1.TabIndex = 1;
             this.label1.Text = "Events ";
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Location = new System.Drawing.Point(83, 368);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1043, 154);
-            this.panel3.TabIndex = 46;
-            // 
-            // label12
-            // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.DimGray;
-            this.label12.Location = new System.Drawing.Point(943, 230);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(90, 18);
-            this.label12.TabIndex = 47;
-            this.label12.Text = "Important";
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel4.BackColor = System.Drawing.Color.Pink;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Location = new System.Drawing.Point(910, 226);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(27, 27);
-            this.panel4.TabIndex = 48;
-            // 
-            // panel5
-            // 
-            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel5.BackColor = System.Drawing.Color.LightGreen;
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Location = new System.Drawing.Point(910, 265);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(27, 27);
-            this.panel5.TabIndex = 50;
-            // 
-            // label13
-            // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.DimGray;
-            this.label13.Location = new System.Drawing.Point(943, 269);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(73, 18);
-            this.label13.TabIndex = 49;
-            this.label13.Text = "Meeting";
-            // 
-            // panel6
-            // 
-            this.panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel6.BackColor = System.Drawing.Color.CadetBlue;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Location = new System.Drawing.Point(910, 301);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(27, 27);
-            this.panel6.TabIndex = 52;
-            // 
-            // label14
-            // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.DimGray;
-            this.label14.Location = new System.Drawing.Point(943, 305);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(54, 18);
-            this.label14.TabIndex = 51;
-            this.label14.Text = "Event";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1041, 152);
-            this.dataGridView1.TabIndex = 0;
             // 
             // EventCalender
             // 

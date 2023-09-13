@@ -27,26 +27,25 @@ namespace AppTest.Master_Tools
 
         private void InitilizeEventsTable()
         {
-            // Create a DataTable to hold the data
+            
             DataTable dataTable = new DataTable();
 
-            // Define the columns for the DataTable
+           
             dataTable.Columns.Add("event_name", typeof(string));
             dataTable.Columns.Add("event_date", typeof(DateTime));
             dataTable.Columns.Add("event_desc", typeof(string));
             dataTable.Columns.Add("event_type", typeof(string));
 
-            // Establish a database connection
             using (connection = APP_CONFIGURATION.ESTABLISH_DB_CONNECTION())
             {
                
-                string query = "SELECT event_name, event_date, event_desc, event_type FROM events_table";
+                string query = "SELECT event_name , event_date, event_desc, event_type FROM events_table";
 
                 using (MySqlCommand cmd = new MySqlCommand(query, connection))
                 {
                     using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
-                        // Read data from the database and add it to the DataTable
+                   
                         while (reader.Read())
                         {
                             string eventName = reader["event_name"].ToString();
@@ -86,11 +85,11 @@ namespace AppTest.Master_Tools
                             color = Color.Pink;
                         }else if (eventType.Equals("Meeting"))
                         {
-                            color = Color.LightGreen;
+                            color = Color.Lime;
                         }
                         else
                         {
-                            color = Color.CadetBlue;
+                            color = Color.PaleTurquoise;
                         }
 
 

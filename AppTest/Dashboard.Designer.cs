@@ -56,7 +56,6 @@
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.InventoryButton = new Guna.UI2.WinForms.Guna2Button();
             this.OrdersButton = new Guna.UI2.WinForms.Guna2Button();
             this.MailsButton = new Guna.UI2.WinForms.Guna2Button();
             this.TrendsButton = new Guna.UI2.WinForms.Guna2Button();
@@ -112,7 +111,6 @@
             this.InvoicesButton.Size = new System.Drawing.Size(232, 32);
             this.InvoicesButton.TabIndex = 15;
             this.InvoicesButton.Text = "Invoices";
-            this.InvoicesButton.Click += new System.EventHandler(this.InvoicesButton_Click);
             // 
             // label5
             // 
@@ -475,7 +473,6 @@
             this.flowLayoutPanel1.Controls.Add(this.DashboardButton);
             this.flowLayoutPanel1.Controls.Add(this.ProductsTogglePanel);
             this.flowLayoutPanel1.Controls.Add(this.panel3);
-            this.flowLayoutPanel1.Controls.Add(this.InventoryButton);
             this.flowLayoutPanel1.Controls.Add(this.OrdersButton);
             this.flowLayoutPanel1.Controls.Add(this.MailsButton);
             this.flowLayoutPanel1.Controls.Add(this.TrendsButton);
@@ -484,35 +481,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(247, 531);
             this.flowLayoutPanel1.TabIndex = 3;
-            // 
-            // InventoryButton
-            // 
-            this.InventoryButton.BackColor = System.Drawing.Color.Transparent;
-            this.InventoryButton.BorderColor = System.Drawing.Color.Transparent;
-            this.InventoryButton.BorderRadius = 7;
-            this.InventoryButton.BorderThickness = 1;
-            this.InventoryButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.InventoryButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.InventoryButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.InventoryButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.InventoryButton.FillColor = System.Drawing.Color.Transparent;
-            this.InventoryButton.Font = new System.Drawing.Font("Swis721 Hv BT", 9.25F);
-            this.InventoryButton.ForeColor = System.Drawing.Color.Gray;
-            this.InventoryButton.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.InventoryButton.HoverState.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InventoryButton.HoverState.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.InventoryButton.Image = ((System.Drawing.Image)(resources.GetObject("InventoryButton.Image")));
-            this.InventoryButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.InventoryButton.ImageOffset = new System.Drawing.Point(7, 0);
-            this.InventoryButton.ImageSize = new System.Drawing.Size(28, 28);
-            this.InventoryButton.Location = new System.Drawing.Point(3, 170);
-            this.InventoryButton.Name = "InventoryButton";
-            this.InventoryButton.Size = new System.Drawing.Size(231, 45);
-            this.InventoryButton.TabIndex = 16;
-            this.InventoryButton.Text = "Inventory";
-            this.InventoryButton.TextOffset = new System.Drawing.Point(17, 0);
-            this.InventoryButton.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
-            this.InventoryButton.Click += new System.EventHandler(this.InventoryButton_Click);
             // 
             // OrdersButton
             // 
@@ -534,7 +502,7 @@
             this.OrdersButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.OrdersButton.ImageOffset = new System.Drawing.Point(7, 0);
             this.OrdersButton.ImageSize = new System.Drawing.Size(28, 28);
-            this.OrdersButton.Location = new System.Drawing.Point(3, 221);
+            this.OrdersButton.Location = new System.Drawing.Point(3, 170);
             this.OrdersButton.Name = "OrdersButton";
             this.OrdersButton.Size = new System.Drawing.Size(231, 45);
             this.OrdersButton.TabIndex = 17;
@@ -563,7 +531,7 @@
             this.MailsButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.MailsButton.ImageOffset = new System.Drawing.Point(7, 0);
             this.MailsButton.ImageSize = new System.Drawing.Size(28, 28);
-            this.MailsButton.Location = new System.Drawing.Point(3, 272);
+            this.MailsButton.Location = new System.Drawing.Point(3, 221);
             this.MailsButton.Name = "MailsButton";
             this.MailsButton.Size = new System.Drawing.Size(231, 45);
             this.MailsButton.TabIndex = 18;
@@ -592,7 +560,7 @@
             this.TrendsButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.TrendsButton.ImageOffset = new System.Drawing.Point(7, 0);
             this.TrendsButton.ImageSize = new System.Drawing.Size(28, 28);
-            this.TrendsButton.Location = new System.Drawing.Point(3, 323);
+            this.TrendsButton.Location = new System.Drawing.Point(3, 272);
             this.TrendsButton.Name = "TrendsButton";
             this.TrendsButton.Size = new System.Drawing.Size(231, 45);
             this.TrendsButton.TabIndex = 19;
@@ -676,7 +644,6 @@
         private Guna.UI2.WinForms.Guna2Button ClientButton;
         private Guna.UI2.WinForms.Guna2Button CRMButton;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private Guna.UI2.WinForms.Guna2Button InventoryButton;
         private Guna.UI2.WinForms.Guna2Button OrdersButton;
         private Guna.UI2.WinForms.Guna2Button MailsButton;
         private Guna.UI2.WinForms.Guna2Button TrendsButton;

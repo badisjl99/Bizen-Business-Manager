@@ -8,6 +8,8 @@ namespace AppTest.Controllers
     public partial class DashboardUC : UserControl
     {
 
+       
+
         MySqlConnection connection;
         public DashboardUC()
         {
@@ -64,6 +66,7 @@ namespace AppTest.Controllers
 
                 // Update the label with the client count
                 ProductCount.Text = productsCount.ToString();
+
                 return productsCount;
             }
         }
@@ -71,11 +74,11 @@ namespace AppTest.Controllers
 
         private void ProgessBarActions()
         {
+
             int value = UpdateProductsCountLabel();
 
-            progressBar.Maximum = 100;
+            progressBar.Maximum = 30;
             progressBar.Value = value;
-
 
         }
         private int CountTasksWithStatusOne()
@@ -221,5 +224,6 @@ namespace AppTest.Controllers
         {
             GetToDoList();
         }
+
     }
 }

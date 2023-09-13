@@ -49,11 +49,11 @@ namespace AppTest
             Container.Controls.Add(new ClientsUC());
         }
 
-        private void InventoryButton_Click(object sender, EventArgs e)
-        {
-            Container.Controls.Clear();
-            Container.Controls.Add(new InventoryUC());
-        }
+        //private void InventoryButton_Click(object sender, EventArgs e)
+        //{
+        //    Container.Controls.Clear();
+        //    Container.Controls.Add(new InventoryUC());
+        //}
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
@@ -66,12 +66,7 @@ namespace AppTest
             Container.Controls.Add(new Showroom());
 
         }
-        private void InvoicesButton_Click(object sender, EventArgs e)
-        {
-            Container.Controls.Clear();
-            Container.Controls.Add(new RequestsUC());
-        }
-
+ 
         private void OrdersButton_Click(object sender, EventArgs e)
         {
             Container.Controls.Clear();
@@ -126,6 +121,6 @@ namespace AppTest
             }
         }
 
-
+       
     }
 }
