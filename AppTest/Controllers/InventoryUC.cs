@@ -26,6 +26,7 @@ namespace AppTest.Controllers
             Container.Controls.Clear();
 
             RegisterInventoryUC registerInventoryUC = new RegisterInventoryUC();
+            registerInventoryUC.Dock = DockStyle.Fill;
             Container.Controls.Add(registerInventoryUC);
         }
 

@@ -79,11 +79,29 @@
     <Reference Include="Azure.Identity, Version=1.9.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
       <HintPath>..\packages\Azure.Identity.1.9.0\lib\netstandard2.0\Azure.Identity.dll</HintPath>
     </Reference>
-    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
-      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
     <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
       <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis, Version=1.62.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.62.0\lib\net45\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.62.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.62.0\lib\net461\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.62.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.62.0\lib\net461\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Calendar.v3, Version=1.62.0.3137, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Calendar.v3.1.62.0.3137\lib\net45\Google.Apis.Calendar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.62.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Core.1.62.0\lib\net45\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.62.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.62.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
     </Reference>
     <Reference Include="Google.Protobuf, Version=3.23.4.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.23.4\lib\net45\Google.Protobuf.dll</HintPath>
@@ -91,20 +109,8 @@
     <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
-    <Reference Include="IronPython, Version=3.4.1.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
-      <HintPath>..\packages\IronPython.3.4.1\lib\net462\IronPython.dll</HintPath>
-    </Reference>
-    <Reference Include="IronPython.Modules, Version=3.4.1.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
-      <HintPath>..\packages\IronPython.3.4.1\lib\net462\IronPython.Modules.dll</HintPath>
-    </Reference>
-    <Reference Include="IronPython.SQLite, Version=3.4.1.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
-      <HintPath>..\packages\IronPython.3.4.1\lib\net462\IronPython.SQLite.dll</HintPath>
-    </Reference>
-    <Reference Include="IronPython.Wpf, Version=3.4.1.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
-      <HintPath>..\packages\IronPython.3.4.1\lib\net462\IronPython.Wpf.dll</HintPath>
-    </Reference>
-    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
-      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="K4os.Compression.LZ4, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Compression.LZ4.1.3.5\lib\net462\K4os.Compression.LZ4.dll</HintPath>
@@ -165,6 +171,9 @@
     </Reference>
     <Reference Include="MySql.Data, Version=8.1.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.1.0\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -359,12 +368,25 @@
     <Compile Include="Master_Tools\AssignTasksUC.Designer.cs">
       <DependentUpon>AssignTasksUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Master_Tools\EventCalender.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master_Tools\EventCalender.Designer.cs">
+      <DependentUpon>EventCalender.cs</DependentUpon>
+    </Compile>
     <Compile Include="Master_Tools\MasterDashboardUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Master_Tools\MasterDashboardUC.Designer.cs">
       <DependentUpon>MasterDashboardUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Master_Tools\NotifyUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master_Tools\NotifyUC.Designer.cs">
+      <DependentUpon>NotifyUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Event.cs" />
     <Compile Include="Models\Master.cs" />
     <Compile Include="Models\Message.cs" />
     <Compile Include="Controllers\NormalClientUC.cs">
@@ -451,6 +473,12 @@
     <Compile Include="Tools\DeletingSuccessUC.Designer.cs">
       <DependentUpon>DeletingSuccessUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tools\EventUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\EventUC.Designer.cs">
+      <DependentUpon>EventUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tools\InvoiceUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -535,8 +563,14 @@
     <EmbeddedResource Include="Master_Tools\AssignTasksUC.resx">
       <DependentUpon>AssignTasksUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Master_Tools\EventCalender.resx">
+      <DependentUpon>EventCalender.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Master_Tools\MasterDashboardUC.resx">
       <DependentUpon>MasterDashboardUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master_Tools\NotifyUC.resx">
+      <DependentUpon>NotifyUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -558,6 +592,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\DeletingSuccessUC.resx">
       <DependentUpon>DeletingSuccessUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\EventUC.resx">
+      <DependentUpon>EventUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\InvoiceUC.resx">
       <DependentUpon>InvoiceUC.cs</DependentUpon>

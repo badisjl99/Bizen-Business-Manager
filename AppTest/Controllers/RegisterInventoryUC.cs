@@ -86,7 +86,10 @@ namespace AppTest.Controllers
         private void Exit_Click(object sender, EventArgs e)
         {
             Controls.Clear();
-            Controls.Add(new InventoryUC());
+            InventoryUC inventoryUc = new InventoryUC() ;
+            inventoryUc.Dock = DockStyle.Fill;
+
+            Controls.Add(inventoryUc);
 
         }
     }

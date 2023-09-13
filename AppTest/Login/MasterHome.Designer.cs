@@ -37,11 +37,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.StaffName = new System.Windows.Forms.Label();
             this.InventoryButton = new Guna.UI2.WinForms.Guna2Button();
-            this.OrdersButton = new Guna.UI2.WinForms.Guna2Button();
-            this.MailsButton = new Guna.UI2.WinForms.Guna2Button();
+            this.NotifyButton = new Guna.UI2.WinForms.Guna2Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.MasterDashboardButton = new Guna.UI2.WinForms.Guna2Button();
             this.AssignButton = new Guna.UI2.WinForms.Guna2Button();
+            this.EventsButton = new Guna.UI2.WinForms.Guna2Button();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.LogoutButton = new System.Windows.Forms.PictureBox();
@@ -142,7 +142,7 @@
             this.InventoryButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.InventoryButton.ImageOffset = new System.Drawing.Point(7, 0);
             this.InventoryButton.ImageSize = new System.Drawing.Size(28, 28);
-            this.InventoryButton.Location = new System.Drawing.Point(3, 54);
+            this.InventoryButton.Location = new System.Drawing.Point(3, 105);
             this.InventoryButton.Name = "InventoryButton";
             this.InventoryButton.Size = new System.Drawing.Size(231, 45);
             this.InventoryButton.TabIndex = 16;
@@ -151,72 +151,43 @@
             this.InventoryButton.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             this.InventoryButton.Click += new System.EventHandler(this.InventoryButton_Click);
             // 
-            // OrdersButton
+            // NotifyButton
             // 
-            this.OrdersButton.BackColor = System.Drawing.Color.Transparent;
-            this.OrdersButton.BorderColor = System.Drawing.Color.Transparent;
-            this.OrdersButton.BorderRadius = 7;
-            this.OrdersButton.BorderThickness = 1;
-            this.OrdersButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.OrdersButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.OrdersButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.OrdersButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.OrdersButton.FillColor = System.Drawing.Color.Transparent;
-            this.OrdersButton.Font = new System.Drawing.Font("Swis721 Hv BT", 9.25F);
-            this.OrdersButton.ForeColor = System.Drawing.Color.Gray;
-            this.OrdersButton.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.OrdersButton.HoverState.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OrdersButton.HoverState.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.OrdersButton.Image = ((System.Drawing.Image)(resources.GetObject("OrdersButton.Image")));
-            this.OrdersButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.OrdersButton.ImageOffset = new System.Drawing.Point(7, 0);
-            this.OrdersButton.ImageSize = new System.Drawing.Size(28, 28);
-            this.OrdersButton.Location = new System.Drawing.Point(3, 105);
-            this.OrdersButton.Name = "OrdersButton";
-            this.OrdersButton.Size = new System.Drawing.Size(231, 45);
-            this.OrdersButton.TabIndex = 17;
-            this.OrdersButton.Text = "Orders";
-            this.OrdersButton.TextOffset = new System.Drawing.Point(16, 0);
-            this.OrdersButton.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
-            this.OrdersButton.Click += new System.EventHandler(this.OrdersButton_Click);
-            // 
-            // MailsButton
-            // 
-            this.MailsButton.BackColor = System.Drawing.Color.Transparent;
-            this.MailsButton.BorderColor = System.Drawing.Color.Transparent;
-            this.MailsButton.BorderRadius = 7;
-            this.MailsButton.BorderThickness = 1;
-            this.MailsButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.MailsButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.MailsButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.MailsButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.MailsButton.FillColor = System.Drawing.Color.Transparent;
-            this.MailsButton.Font = new System.Drawing.Font("Swis721 Hv BT", 9.25F);
-            this.MailsButton.ForeColor = System.Drawing.Color.Gray;
-            this.MailsButton.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.MailsButton.HoverState.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MailsButton.HoverState.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.MailsButton.Image = ((System.Drawing.Image)(resources.GetObject("MailsButton.Image")));
-            this.MailsButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.MailsButton.ImageOffset = new System.Drawing.Point(7, 0);
-            this.MailsButton.ImageSize = new System.Drawing.Size(28, 28);
-            this.MailsButton.Location = new System.Drawing.Point(3, 156);
-            this.MailsButton.Name = "MailsButton";
-            this.MailsButton.Size = new System.Drawing.Size(231, 45);
-            this.MailsButton.TabIndex = 18;
-            this.MailsButton.Text = "Chat";
-            this.MailsButton.TextOffset = new System.Drawing.Point(16, 0);
-            this.MailsButton.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
-            this.MailsButton.Click += new System.EventHandler(this.MailsButton_Click);
+            this.NotifyButton.BackColor = System.Drawing.Color.Transparent;
+            this.NotifyButton.BorderColor = System.Drawing.Color.Transparent;
+            this.NotifyButton.BorderRadius = 7;
+            this.NotifyButton.BorderThickness = 1;
+            this.NotifyButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.NotifyButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.NotifyButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.NotifyButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.NotifyButton.FillColor = System.Drawing.Color.Transparent;
+            this.NotifyButton.Font = new System.Drawing.Font("Swis721 Hv BT", 9.25F);
+            this.NotifyButton.ForeColor = System.Drawing.Color.Gray;
+            this.NotifyButton.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.NotifyButton.HoverState.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotifyButton.HoverState.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.NotifyButton.Image = ((System.Drawing.Image)(resources.GetObject("NotifyButton.Image")));
+            this.NotifyButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.NotifyButton.ImageOffset = new System.Drawing.Point(7, 0);
+            this.NotifyButton.ImageSize = new System.Drawing.Size(28, 28);
+            this.NotifyButton.Location = new System.Drawing.Point(3, 156);
+            this.NotifyButton.Name = "NotifyButton";
+            this.NotifyButton.Size = new System.Drawing.Size(231, 45);
+            this.NotifyButton.TabIndex = 18;
+            this.NotifyButton.Text = "Notify";
+            this.NotifyButton.TextOffset = new System.Drawing.Point(16, 0);
+            this.NotifyButton.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
+            this.NotifyButton.Click += new System.EventHandler(this.NotifyButton_Click);
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel1.Controls.Add(this.MasterDashboardButton);
-            this.flowLayoutPanel1.Controls.Add(this.InventoryButton);
-            this.flowLayoutPanel1.Controls.Add(this.OrdersButton);
-            this.flowLayoutPanel1.Controls.Add(this.MailsButton);
             this.flowLayoutPanel1.Controls.Add(this.AssignButton);
+            this.flowLayoutPanel1.Controls.Add(this.InventoryButton);
+            this.flowLayoutPanel1.Controls.Add(this.NotifyButton);
+            this.flowLayoutPanel1.Controls.Add(this.EventsButton);
             this.flowLayoutPanel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(6, 309);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -272,7 +243,7 @@
             this.AssignButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.AssignButton.ImageOffset = new System.Drawing.Point(7, 0);
             this.AssignButton.ImageSize = new System.Drawing.Size(28, 28);
-            this.AssignButton.Location = new System.Drawing.Point(3, 207);
+            this.AssignButton.Location = new System.Drawing.Point(3, 54);
             this.AssignButton.Name = "AssignButton";
             this.AssignButton.Size = new System.Drawing.Size(231, 45);
             this.AssignButton.TabIndex = 19;
@@ -280,6 +251,35 @@
             this.AssignButton.TextOffset = new System.Drawing.Point(16, 0);
             this.AssignButton.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             this.AssignButton.Click += new System.EventHandler(this.AssignButton_Click);
+            // 
+            // EventsButton
+            // 
+            this.EventsButton.BackColor = System.Drawing.Color.Transparent;
+            this.EventsButton.BorderColor = System.Drawing.Color.Transparent;
+            this.EventsButton.BorderRadius = 7;
+            this.EventsButton.BorderThickness = 1;
+            this.EventsButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.EventsButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.EventsButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.EventsButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.EventsButton.FillColor = System.Drawing.Color.Transparent;
+            this.EventsButton.Font = new System.Drawing.Font("Swis721 Hv BT", 9.25F);
+            this.EventsButton.ForeColor = System.Drawing.Color.Gray;
+            this.EventsButton.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.EventsButton.HoverState.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EventsButton.HoverState.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.EventsButton.Image = ((System.Drawing.Image)(resources.GetObject("EventsButton.Image")));
+            this.EventsButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.EventsButton.ImageOffset = new System.Drawing.Point(7, 0);
+            this.EventsButton.ImageSize = new System.Drawing.Size(28, 28);
+            this.EventsButton.Location = new System.Drawing.Point(3, 207);
+            this.EventsButton.Name = "EventsButton";
+            this.EventsButton.Size = new System.Drawing.Size(231, 45);
+            this.EventsButton.TabIndex = 20;
+            this.EventsButton.Text = "Events";
+            this.EventsButton.TextOffset = new System.Drawing.Point(16, 0);
+            this.EventsButton.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
+            this.EventsButton.Click += new System.EventHandler(this.EventsButton_Click);
             // 
             // timer
             // 
@@ -413,8 +413,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label StaffName;
         private Guna.UI2.WinForms.Guna2Button InventoryButton;
-        private Guna.UI2.WinForms.Guna2Button OrdersButton;
-        private Guna.UI2.WinForms.Guna2Button MailsButton;
+        private Guna.UI2.WinForms.Guna2Button NotifyButton;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Guna.UI2.WinForms.Guna2Button MasterDashboardButton;
         private System.Windows.Forms.Timer timer;
@@ -427,5 +426,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel Container;
         private Guna.UI2.WinForms.Guna2Button AssignButton;
+        private Guna.UI2.WinForms.Guna2Button EventsButton;
     }
 }

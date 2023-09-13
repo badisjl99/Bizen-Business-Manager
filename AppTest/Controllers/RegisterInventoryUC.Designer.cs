@@ -52,7 +52,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(296, 454);
+            this.checkBox2.Location = new System.Drawing.Point(343, 455);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(173, 17);
             this.checkBox2.TabIndex = 23;
@@ -62,7 +62,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(296, 422);
+            this.checkBox1.Location = new System.Drawing.Point(343, 423);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(322, 17);
             this.checkBox1.TabIndex = 22;
@@ -73,7 +73,7 @@
             // 
             this.AddInventoryButton.BackColor = System.Drawing.Color.YellowGreen;
             this.AddInventoryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.AddInventoryButton.Location = new System.Drawing.Point(500, 507);
+            this.AddInventoryButton.Location = new System.Drawing.Point(547, 508);
             this.AddInventoryButton.Name = "AddInventoryButton";
             this.AddInventoryButton.Size = new System.Drawing.Size(134, 31);
             this.AddInventoryButton.TabIndex = 21;
@@ -88,7 +88,7 @@
             0,
             0,
             0});
-            this.CapacityBox.Location = new System.Drawing.Point(584, 370);
+            this.CapacityBox.Location = new System.Drawing.Point(631, 371);
             this.CapacityBox.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -115,7 +115,7 @@
             "Phyiscal",
             "Phyiscal-Shared",
             "Cloud-Based"});
-            this.TypeBox.Location = new System.Drawing.Point(296, 369);
+            this.TypeBox.Location = new System.Drawing.Point(343, 370);
             this.TypeBox.Name = "TypeBox";
             this.TypeBox.Size = new System.Drawing.Size(223, 21);
             this.TypeBox.TabIndex = 19;
@@ -124,7 +124,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(293, 349);
+            this.label6.Location = new System.Drawing.Point(340, 350);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(107, 17);
             this.label6.TabIndex = 18;
@@ -134,7 +134,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(589, 280);
+            this.label5.Location = new System.Drawing.Point(636, 281);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(136, 17);
             this.label5.TabIndex = 17;
@@ -144,7 +144,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(586, 352);
+            this.label4.Location = new System.Drawing.Point(633, 353);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(139, 17);
             this.label4.TabIndex = 16;
@@ -152,7 +152,7 @@
             // 
             // LocationBox
             // 
-            this.LocationBox.Location = new System.Drawing.Point(584, 300);
+            this.LocationBox.Location = new System.Drawing.Point(631, 301);
             this.LocationBox.Name = "LocationBox";
             this.LocationBox.Size = new System.Drawing.Size(223, 20);
             this.LocationBox.TabIndex = 15;
@@ -161,7 +161,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(293, 277);
+            this.label3.Location = new System.Drawing.Point(340, 278);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(119, 17);
             this.label3.TabIndex = 14;
@@ -169,7 +169,7 @@
             // 
             // NameBox
             // 
-            this.NameBox.Location = new System.Drawing.Point(296, 297);
+            this.NameBox.Location = new System.Drawing.Point(343, 298);
             this.NameBox.Name = "NameBox";
             this.NameBox.Size = new System.Drawing.Size(223, 20);
             this.NameBox.TabIndex = 13;
@@ -177,7 +177,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(390, 74);
+            this.pictureBox1.Location = new System.Drawing.Point(437, 75);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(324, 165);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -186,6 +186,7 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.Controls.Add(this.exit);
             this.panel1.Controls.Add(this.AddInventoryButton);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -207,7 +208,7 @@
             // exit
             // 
             this.exit.Image = ((System.Drawing.Image)(resources.GetObject("exit.Image")));
-            this.exit.Location = new System.Drawing.Point(987, 27);
+            this.exit.Location = new System.Drawing.Point(1139, 18);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(40, 40);
             this.exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

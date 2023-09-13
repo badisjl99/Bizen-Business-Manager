@@ -97,8 +97,6 @@ namespace AppTest.SignUp
 
         private void VerifyButton_Click(object sender, EventArgs e)
         {
-            
-
             string reference = ReferenceBox.Text;
             string key = "#CMP0129NSXYM7S";
 
