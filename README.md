@@ -1,76 +1,75 @@
- Support Standard Markdown / CommonMark and GFM(GitHub Flavored Markdown);
-- Full-featured: Real-time Preview, Image (cross-domain) upload, Preformatted text/Code blocks/Tables insert, Code fold, Search replace, Read only, Themes, Multi-languages, L18n, HTML entities, Code syntax highlighting...;
-- Markdown Extras : Support ToC (Table of Contents), Emoji, Task lists, @Links...;
-- Compatible with all major browsers (IE8+), compatible Zepto.js and iPad;
-- Support identification, interpretation, fliter of the HTML tags;
-- Support TeX (LaTeX expressions, Based on KaTeX), Flowchart and Sequence Diagram of Markdown extended syntax;
-- Support AMD/CMD (Require.js & Sea.js) Module Loader, and Custom/define editor plugins;
+# Your Project Name
 
-# Editor.md
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/YourUsername/YourRepo)
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+![GitHub last commit](https://img.shields.io/github/last-commit/YourUsername/YourRepo)
+![GitHub issues](https://img.shields.io/github/issues/YourUsername/YourRepo)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/YourUsername/YourRepo)
 
-![](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png)
-
-![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
+![App Screenshot](https://i.ibb.co/XYXCS5M/login.png)
 
 
-**Table of Contents**
+Bizen+ Business Manager is a robust and user-friendly C# WinForms application designed to streamline your business operations. With a feature-rich staff interface for managing products, clients, inventory, tasks, and orders, it empowers your team to work efficiently. The master interface, offering advanced privileges, provides insights into your business with comprehensive dashboards, task assignment, inventory management, and event scheduling. Whether you're a small startup or a growing enterprise, Bizen+ Business Manager is your all-in-one solution for enhanced productivity and business growth.
 
-[TOCM]
+## Table of Contents
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-[TOC]
+## Features
+- **Staff Interface:**
+  - Dashboard displaying product and client totals, inventory capacity, user locations, and assigned tasks.
+  - Product management: search, delete, add new.
+  - Showroom to display product cards' data.
+  - CRM for adding clients and managing invoices.
+  - Orders for staff to create and track orders, view earnings.
+  - Chat interface for staff communication.
+## Screenshots
+<b>Dashboard</b>
+![Dashboard](https://i.ibb.co/Zmd74Lb/staff-dahsboard.png)
+<b>Products Management</b>
+![Product Management](https://i.ibb.co/DLCczHL/product-add.png)
+![Product Management2](https://i.ibb.co/Gpc4d9C/showroom.png)
+<b>CRM</b>
+![CRM](https://i.ibb.co/d52cLq5/crm.png)
+<b>Invoices</b>
+![Invoices](https://i.ibb.co/d52cLq5/crm.png)
+<b>Orders</b>
+![Orders](https://i.ibb.co/2vgNnL7/orders.png)
+<b>Create Order</b>
+![Orders](https://i.ibb.co/VxcKSQs/add-orders.png)
+<b>Chat</b>
+![Chat](https://i.ibb.co/v4TN1mT/chat.png)
 
-#H1 header
-##H2 header
-###H3 header
-####H4 header
-#####H5 header
-######H6 header
-#Heading 1 link [Heading link](https://github.com/pandao/editor.md "Heading link")
-##Heading 2 link [Heading link](https://github.com/pandao/editor.md "Heading link")
-###Heading 3 link [Heading link](https://github.com/pandao/editor.md "Heading link")
-####Heading 4 link [Heading link](https://github.com/pandao/editor.md "Heading link") Heading link [Heading link](https://github.com/pandao/editor.md "Heading link")
-#####Heading 5 link [Heading link](https://github.com/pandao/editor.md "Heading link")
-######Heading 6 link [Heading link](https://github.com/pandao/editor.md "Heading link")
 
-##Headers (Underline)
 
-H1 Header (Underline)
-=============
+- **Master Interface:**
+  - Separate login with advanced privileges.
+  - Master dashboard showing product and client totals, inventory capacity, and more.
+  - Pie chart displaying product type distribution.
+  - Gauge to track finished tasks.
+  - Task assignment and approval.
+  - Inventory management.
+  - Event creation and scheduling.
 
-H2 Header (Underline)
--------------
+#Screenshots : 
+<b>Master Dashboard</b>
+![Master Dashboard](https://i.ibb.co/BNjKfbS/masterdahsboard.png)
+<b>Assign And Manage Tasks</b>
+![Task Assignment](https://i.ibb.co/LNNrJsw/assign.png)
+<b>Inventory Management</b>
+![Inventory](https://i.ibb.co/z4VW76j/inventory.png)
+<b>Register Inventory</b>
+![Inventory](https://i.ibb.co/HxWQb6T/add-inventopry.png)
+<b>Create Event</b>
+![Event Creation](https://i.ibb.co/Tcb4s2N/eventss.png)
+<b>Events Calender</b>
+![Event Calendar](https://i.ibb.co/C97yJ0H/calender.png)
 
-###Characters
-                
-----
-
-~~Strikethrough~~ <s>Strikethrough (when enable html tag decode.)</s>
-*Italic*      _Italic_
-**Emphasis**  __Emphasis__
-***Emphasis Italic*** ___Emphasis Italic___
-
-Superscript: X<sub>2</sub>，Subscript: O<sup>2</sup>
-
-**Abbreviation(link HTML abbr tag)**
-
-The <abbr title="Hyper Text Markup Language">HTML</abbr> specification is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.
-
-###Blockquotes
-
-> Blockquotes
-
-Paragraphs and Line Breaks
-                    
-> "Blockquotes Blockquotes", [Link](http://localhost/)。
-
-###Links
-
-[Links](http://localhost/)
-
-[Links with title](http://localhost/ "link title")
-
-`<link>` : <https://github.com>
-
-[Reference link][id/name] 
-
-[id/name]: http://link-url/
+## Installation
+1. Clone this repository.
+   ```sh
+   git clone https://github.com/YourUsername/YourRepo.git
