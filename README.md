@@ -1,10 +1,10 @@
 # Bizen-Business-Manager
 
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/YourUsername/YourRepo)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/badisjl99/Bizen-Business-Manager)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
-![GitHub last commit](https://img.shields.io/github/last-commit/YourUsername/YourRepo)
-![GitHub issues](https://img.shields.io/github/issues/YourUsername/YourRepo)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/YourUsername/YourRepo)
+![GitHub last commit](https://img.shields.io/github/last-commit/badisjl99/Bizen-Business-Manager)
+![GitHub issues](https://img.shields.io/github/issues/badisjl99/Bizen-Business-Manager)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/badisjl99/Bizen-Business-Manager)
 
 ![App Screenshot](https://i.ibb.co/XYXCS5M/login.png)
 
@@ -72,4 +72,4 @@ Bizen+ Business Manager is a robust and user-friendly C# WinForms application de
 ## Installation
 1. Clone this repository.
    ```sh
-   git clone https://github.com/YourUsername/YourRepo.git
+   git clone https://github.com/badisjl99/Bizen-Business-Manager.git
